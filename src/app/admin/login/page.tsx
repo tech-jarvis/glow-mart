@@ -9,7 +9,7 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-sm rounded-2xl border border-zinc-800 bg-zinc-900 p-8 shadow-xl">
         <h1 className="text-xl font-semibold text-white">Glow Mart admin</h1>
         <p className="mt-1 text-sm text-zinc-400">
-          Sign in to manage products and orders.
+          Who&apos;s managing the store?
         </p>
         <AdminLoginForm />
         <p className="mt-6 text-center text-sm text-zinc-500">
