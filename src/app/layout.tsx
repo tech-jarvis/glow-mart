@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Glow Mart — curated female accessories, beauty essentials, watches, and jewellery. Shop glowmartofficial.com.",
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "en_PK",
     url: siteUrl,
     siteName: "Glow Mart",
   },

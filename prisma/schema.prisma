@@ -35,7 +35,7 @@ model Order {
   addressLine2    String?
   city            String?
   postalCode      String?
-  country         String?     @default("India")
+  country         String?     @default("Pakistan")
   notes           String?
   items           OrderItem[]
 }

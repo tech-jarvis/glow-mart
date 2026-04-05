@@ -38,7 +38,7 @@ export function ProductForm({
       </label>
       <label className="block">
         <span className="text-sm font-medium text-zinc-300">
-          Price (INR, rupees)
+          Price (PKR, rupees)
         </span>
         <input
           name="price"

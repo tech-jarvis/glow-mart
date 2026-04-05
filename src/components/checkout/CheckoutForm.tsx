@@ -124,7 +124,7 @@ export function CheckoutForm() {
           />
         </label>
         <label className="block">
-          <span className="text-sm font-medium text-rose-950">PIN code</span>
+          <span className="text-sm font-medium text-rose-950">Postal code</span>
           <input
             name="postalCode"
             autoComplete="postal-code"
@@ -136,7 +136,7 @@ export function CheckoutForm() {
           <input
             name="country"
             autoComplete="country-name"
-            defaultValue="India"
+            defaultValue="Pakistan"
             className="mt-1 w-full rounded-xl border border-rose-200 bg-white px-3 py-2.5 text-rose-950 outline-none ring-rose-400/30 focus:ring-2"
           />
         </label>
