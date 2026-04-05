@@ -3,8 +3,11 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  // Pooled URL (PgBouncer) — Supabase / Vercel: POSTGRES_PRISMA_URL
+  url       = env("POSTGRES_PRISMA_URL")
+  // Direct connection — required for `prisma migrate` / `db push`
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model Product {
