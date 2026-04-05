@@ -14,11 +14,26 @@ const sans = Nunito_Sans({
   variable: "--font-body",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://glowmartofficial.com";
+function resolveSiteUrl(): string {
+  const raw = (
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://glowmartofficial.com"
+  ).trim();
+  if (!raw) return "https://glowmartofficial.com";
+  if (/^https?:\/\//i.test(raw)) return raw;
+  return `https://${raw}`;
+}
+
+const siteUrl = resolveSiteUrl();
+
+let metadataBase: URL;
+try {
+  metadataBase = new URL(siteUrl);
+} catch {
+  metadataBase = new URL("https://glowmartofficial.com");
+}
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase,
   title: {
     default: "Glow Mart · Beauty, watches & jewellery",
     template: "%s · Glow Mart",
